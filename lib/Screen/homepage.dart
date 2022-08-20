@@ -15,9 +15,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(
-        title: "Class 11 Computer Guid",
-      ),
+      // ignore: prefer_const_literals_to_create_immutables
+      appBar: MyAppBar(title: "Class 11 Computer Guid", action: [
+        Row(
+          children: const [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.star),
+            ),
+            Icon(Icons.share)
+          ],
+        )
+      ]),
       backgroundColor: Theme.of(context).backgroundColor,
       body: ListView(
         children: [

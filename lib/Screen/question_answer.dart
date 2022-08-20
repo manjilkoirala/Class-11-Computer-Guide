@@ -17,6 +17,12 @@ class NotePage extends StatelessWidget {
       func = Computer.chapter1;
     } else if (custometitle == "Number System") {
       func = Computer.chapter2;
+    } else if (custometitle == "Computer Software") {
+      func = Computer.chapter3;
+    } else if (custometitle == "Application Package") {
+      func = Computer.chapter4;
+    } else if (custometitle == "Programming Concepts") {
+      func = Computer.chapter5;
     }
 
     return Scaffold(
