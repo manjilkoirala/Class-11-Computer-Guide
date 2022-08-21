@@ -1,3 +1,4 @@
+import 'package:class11computer/Screen/splash_scree.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:upgrader/upgrader.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const HomePage(),
+        home: const Splash(),
         theme: ThemeData(
           primarySwatch: Colors.blueGrey,
           fontFamily: GoogleFonts.poppins().fontFamily,

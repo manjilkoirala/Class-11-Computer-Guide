@@ -45,7 +45,12 @@ class Computer {
     Notes(
         question: "8. Classify computer on the basis of size.",
         answer:
-            "Classification of computer on the basis of size are as follows:\n\n1. Super Computer: This computer are one of the fastest and powerful digital computer which can perform only a particular types of jobs such as weather forecasting, rocket launching, population counting etc. They were tremendously huge in size and are very expensive. Due to this reason they are not commercially successful. They are used by large corporations and government agencies. They were large in size hence, it occupy much more space and require temperature controlled room.\nApplications:\n i. Weather forecasting\n ii. Scientific simulations\n iii. Fluid dynamic calculations\n iv. Nuclear energy research\n\n2. Mainframe Computer: This computer are also largest, fastest and perhaps one of the most expensive computer. Super computer are much more powerful and expensive but they are similar in size with mainframe computers. These computers have high processing unit and large storage capacity. This computer have multiple terminal.\nApplications:\n i. Population census\n ii. Agro census\n iii. SLC result processing\n iv. Governmental offices\n\n3. Mini Computer:This computer are smaller than mainframe computer and are more powerful and expensive compare with micro-computer. They use terminal and are connected with more than 50 terminal at a time. Hence, it can handle much more amount of input and output than micro computer. The capability of mini computer is somewhere in between mainframe and micro computer. So, they are often called mid-range computer.\nApplications:\n i. Business\n ii. Industries\n iii. Universities\n iv. Banks\n\n4. Micro Computer: These are the smallest computer develop till date they use micro-processor as their major processing unit. Hence, they are called micro-computers. This computer are small and low cost digital computer. They are also called home computer or personal computer. This days we can find various micro computer that has various processing speed, storage, capacity and size according to cost. They are normally used in office, home, school, shop etc. Micro Computer are also found in various shape and size. They are desktop, Laptop and palmtop.")
+            "Classification of computer on the basis of size are as follows:\n\n1. Super Computer: This computer are one of the fastest and powerful digital computer which can perform only a particular types of jobs such as weather forecasting, rocket launching, population counting etc. They were tremendously huge in size and are very expensive. Due to this reason they are not commercially successful. They are used by large corporations and government agencies. They were large in size hence, it occupy much more space and require temperature controlled room.\nApplications:\n i. Weather forecasting\n ii. Scientific simulations\n iii. Fluid dynamic calculations\n iv. Nuclear energy research\n\n2. Mainframe Computer: This computer are also largest, fastest and perhaps one of the most expensive computer. Super computer are much more powerful and expensive but they are similar in size with mainframe computers. These computers have high processing unit and large storage capacity. This computer have multiple terminal.\nApplications:\n i. Population census\n ii. Agro census\n iii. SLC result processing\n iv. Governmental offices\n\n3. Mini Computer:This computer are smaller than mainframe computer and are more powerful and expensive compare with micro-computer. They use terminal and are connected with more than 50 terminal at a time. Hence, it can handle much more amount of input and output than micro computer. The capability of mini computer is somewhere in between mainframe and micro computer. So, they are often called mid-range computer.\nApplications:\n i. Business\n ii. Industries\n iii. Universities\n iv. Banks\n\n4. Micro Computer: These are the smallest computer develop till date they use micro-processor as their major processing unit. Hence, they are called micro-computers. This computer are small and low cost digital computer. They are also called home computer or personal computer. This days we can find various micro computer that has various processing speed, storage, capacity and size according to cost. They are normally used in office, home, school, shop etc. Micro Computer are also found in various shape and size. They are desktop, Laptop and palmtop."),
+    Notes(
+        question:
+            "9. Differentiate between Primary memory and Secondary memory",
+        answer: "",
+        img: "assets/primaryvssecondary.png")
   ];
   static final chapter2 = [
     Notes(
@@ -118,40 +123,62 @@ class Computer {
         answer:
             "Language processor is also know as language translator. It is a type of softhware that is use to convert codes of high level or assembly level to machine language.  Since it is difficult and incontinent to write a program in machine level language, language developer uses several assemblies and high level language which are not directly understood by the computer. Hence, we use different types of language processor to convert and make machine understandable. There are different types of language translators. They are:\n\ni. Assembler: These language translator/processor converts program written in assembly level language (source program) into machine understandable language (object language) Since assembly level language are closer to machine level language, the conversion taken by assembler is relatively less. It converts program at once into machine level language.\n\n ii. Interpreter: This is the type of language which converts program written in high level language (source program) into machine level language (object program). It converts one statement at a time so its debugging can be easier and less time consuming. Its program execution is slower than that of compiler. Most of the new programming language use interpreter which allocate less memory space. Programs like BASIC, C#, Php, etc. use interpreter for conversion.\b\niii. Compiler: Those language processors which helps to convert program written in high level language (source program) into machine level program (object program). It converts whole program into machine level language at once. It is the largest method of translating a program in which debugging is complex and time consuming. Programming languages like C, C++, Java, etc. use complier."),
     Notes(
+        question: "3. Difference between compiler and interpreter.",
+        answer: " ",
+        img: "assets/CompilervsInterpreter.jpg"),
+    Notes(
         question:
-            "3. What is c programming language? What are the features of c language?",
+            "4. What is c programming language? What are the features of c language?",
         answer:
             "C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system.\n     It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support.\n\nFeatures of c language:\ni. It supports high level and level programming both, so known as mid level programming language.\nii. It is mostly used for System programming but very popular for Application programming, too.\niii. The program development is faster and more efficient.\niv. It has very powerful tools and keywords.\nv. It uses its own text editor.\nvi. It has its own compiler.\nvii. It supports structured programming.\nviii. It has very powerfull library"),
     Notes(
-        question: "4. Define operator. Explain its types.",
+        question: "5. Define operator. Explain its types.",
         answer:
             "An operator is a symbol that operates on a value or a variable. C programming language has a rich set of built-in operators. Operator that requires two operands are binary (dyadic) operators, operators that require one operand is unary (monadic) and the operator that requires three operands is ternary operator. Example: A-B here '-' is operator.\n\n Types of operators in C:\nArithmetic Operator\nii. Relational Operator\niii. Equality Operator\niv. Logical Operator\nv. Assignment Operator\nvi. Increment/Decrement Operator\nvii. Conditional Operator (Ternary Operator)\nviii. Bitwise Operator\nviii. Special Operator"),
     Notes(
         question:
-            "5. Write a C program to check whether given number is divisible by 5 and 7 or not.",
+            "6. Write a C program to check whether given number is divisible by 5 and 7 or not.",
         answer:
             "Program:\n\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\nint num;\nprintf(\"Enter any number: \");\nscanf(\"%d\", &num);\nif((num % 5 == 0) && (num % 11 == 0))\n{\nprintf(\"Number is divisible by 5 and 11\");\n}\nelse\n{\nprintf(\"Number is not divisible by 5 and 11\");\n}\nreturn 0;\n}"),
     Notes(
-        question: "6. Write a C program to generate Fibonacci series.",
+        question: "7. Write a C program to generate Fibonacci series.",
         answer:
             'Program:\n\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\nint i, n;\nint t1 = 0, t2 = 1;\nint nextTerm = t1 + t2;\nprintf("Enter the number of terms: ");\nscanf("%d", &n);\nprintf("Fibonacci Series: %d, %d, ", t1, t2);\nfor (i = 3; i <= n; ++i) {\nprintf("%d, ", nextTerm);\n t1 = t2;\nt2 = nextTerm;\nnextTerm = t1 + t2;\n}\nreturn 0;\n}'),
     Notes(
         question:
-            "7. Write a C program to check whether given number is palindrome or not.",
+            "8. Write a C program to check whether given number is palindrome or not.",
         answer:
             'Program:\n\n#include <stdio.h>\n#include <conio.h>\nint main() \n{\nint n, rev = 0, rem, orig;\nprintf("Enter an integer: ");\nscanf("%d", &n);\norig = n;\nwhile (n != 0) {\nrem = n % 10;\nrev = reversed * 10 + rem;\nn /= 10;\n}\nif (orig == rev)\nprintf("%d is a palindrome.", original);\nelse\nprintf("%d is not a palindrome.", original);\nreturn 0;\n}'),
     Notes(
         question:
-            "8. Write a C program to enter salary of 500 employee and find the average salary.",
+            "9. Write a C program to enter salary of 500 employee and find the average salary.",
         answer:
             'Program:\n\n#include<stdio.h>\n#include<conio.h>\nint main() {\nint num[500], sum=0, avg, i;\nprintf("Enter the salary of 500 employee: ");\nfor(i=0;i<500;i++) {\nscanf("%d",&num[i]);\nsum=sum+num[i];\n}\navg=sum/500;\nprintf("Average of 500 salary is %d",avg);\nreturn 0;\n}'),
     Notes(
         question:
-            "9. Write a C program to enter 4X4 matrix and find sum of its elements.",
+            "10. Write a C program to enter 4X4 matrix and find sum of its elements.",
         answer:
-            'Program:\n\n#include<stdio.h>\n#include<conio.h>\nmain() {\nint a[4][4],b[4][4],sum[4][4],i,j;\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nprintf("input the %d%d element of matrix a:",i,j);\nscanf("%d",&a[i][j]);\n} \n}\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nprintf("input the %d%d element of matrix b:",i,j);\nscanf("%d",&b[i][j]);\n}\n}\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nsum[i][j]=a[i][j]+b[i][j];\n}\n}\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nprintf("%d\\t",sum[i][j]);\n}\nprintf("\\n");\n}\n}')
+            'Program:\n\n#include<stdio.h>\n#include<conio.h>\nmain() {\nint a[4][4],b[4][4],sum[4][4],i,j;\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nprintf("input the %d%d element of matrix a:",i,j);\nscanf("%d",&a[i][j]);\n} \n}\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nprintf("input the %d%d element of matrix b:",i,j);\nscanf("%d",&b[i][j]);\n}\n}\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nsum[i][j]=a[i][j]+b[i][j];\n}\n}\nfor(i=0;i<4;i++) {\nfor(j=0;j<4;j++) {\nprintf("%d\\t",sum[i][j]);\n}\nprintf("\\n");\n}\n}'),
+    Notes(
+        question:
+            "11. Write a C program to enter 10 number and find the greatest.",
+        answer:
+            'Program:\n\n#include <stdio.h>\n#include\nint main() {\nint a[10];\nint i;\nint greatest;\nprintf("Enter ten values:");\nfor (i = 0; i < 10; i++) {\nscanf("%d", &a[i]);\n}\n greatest = a[0];\nfor (i = 0; i < 10; i++) {\nif (a[i] > greatest) {\ngreatest = a[i];\n}\n}\nprintf("Greatest of ten numbers is %d", greatest);\nreturn 0;\n}')
   ];
-  static final chapter6 = [];
+  static final chapter6 = [
+    Notes(
+        question: "1. Define HTML. Explain its features. ",
+        answer:
+            "HTML stands for HyperText Markup Language. It is use to create web pages and web applications. HTML file itself is a text file which contains several tags and attributes. HTML was develop by Tim Berner Lee that was based on SGML (Standard Generalized Markup Language). The tags and attributes used to create HTML file are displayed using web browser. Web browser helps to understand all the tags and attributes given by the user and generate the contain of the page. The latest version of HTML is 5.\n\nFeatures of HTML:\n1) It is a very easy and simple language.\n2) It can be easily understood and modified.\n3) It is very easy to make an effective presentation with HTML. \n4) It provides a flexible way to design web pages along with the text.\n5) It facilitates programmers to add a link on the web pages, so it enhances theinterest of browsing of the user.\n6) It is platform-independent because it can be displayed on any platform like Windows, Linux, etc.\n7) HTML is a case-insensitive language, which means we can use tags either in lower-case or upper-case.\n8) It facilitates the programmer to add Graphics, Videos, and Sound to the web pages which makes it more attractive."),
+    Notes(
+        question: "2. Define DBMS. Explain its advantages.",
+        answer:
+            "A Database management system(DBMS) is a software pacakage designed to define, manipulate, retrive and manage data in a database. A DBMS generally manipulates the data itself, the data formate, field names, records structure and field structure. The main purpose of DBMS is to store data, process them and obtain desired information. For Eg, Ms-Access, My-SQL, Oracle, Fox pro, dBase.\n\n         Advantages of DBMS are:\n1) In DBMS, all the files are integrated in a single database. So there is no chance of duplicate data.\n2)Data security level is high by protecting your data from unauthorized access. Only authorized users should have the grant to access the database.\n3)DBMS allows multiple users to access the same database at a time.\n4)In DBMS, data is stored in a single database so data becomes more consistent in comparison to file processing systems.\n5)Unauthorized persons are not allowed to access the database because of security credentials.\n6) DBMS allows data integrity which makes it easy to decrease data duplicity Data integration and reduces redundancy as well as data inconsistency.\n7)Data can be shared between authorized users of the database in DBMS.\n8)DBMS solves this problem of taking backup automatically and recovery of the database.\n9)Any unauthorized access of database is restricted because of security credentials."),
+    Notes(
+        question: "3. Important Tags in HTMl. (Important of MCQs)",
+        answer:
+            "HTML Tags:\n<p> Paragraph Tag </p>\n<h2> Heading Tag </h2>\n<b> Bold Tag </b>\n<i> Italic Tag </i>\n<u> Underline Tag</u>\nUnclosed HTML Tags: <br> Tag: br stands for break line, it breaks the line of the code.\n<hr> Tag: hr stands for Horizontal Rule. This tag is used to put a line across the webpage.\nHTML Meta Tags: DOCTYPE, title, link, meta and style\nHTML Text Tags: <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <strong>, <em>, <abbr>, <acronym>, <address>, <bdo>, <blockquote>, <cite>, <q>, <code>, <ins>, <del>, <dfn>, <kbd>, <pre>, <samp>, <var> and <br>\nHTML List Tags: <ul>, <ol>, <li>\nHTML Table Tags: table, tr, td, th, tbody, thead, tfoot, col, colgroup and caption")
+  ];
   static final chapter7 = [
     Notes(
         question: "1. Define multimedia. Explain its components/elements.",

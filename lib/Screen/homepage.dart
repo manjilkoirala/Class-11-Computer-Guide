@@ -1,29 +1,52 @@
-// ignore_for_file: prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
 
 import 'package:class11computer/Screen/question_answer.dart';
 import 'package:class11computer/widgets/appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
+import 'package:store_redirect/store_redirect.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // ignore: prefer_const_literals_to_create_immutables
       appBar: MyAppBar(title: "Class 11 Computer Guid", action: [
         Row(
-          children: const [
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(Icons.star),
+          children: [
+            Button(
+              icon: Icons.star,
+              ontap: () {
+                StoreRedirect.redirect(
+                    androidAppId: "com.techlearnhere.class11computer");
+              },
             ),
-            Icon(Icons.share)
+            Button(
+              icon: Icons.share,
+              ontap: () {
+                Share.share(
+                    'https://play.google.com/store/apps/details?id=com.techlearnhere.class11computer');
+              },
+            ),
+            Button(
+              icon: Icons.info,
+              ontap: () {
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                          title: const Text("Class 11 Computer Guide"),
+                          actions: [
+                            TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text("OK"))
+                          ],
+                          content: const Text(
+                              "Class 11 Computer Guide contains important notes of NEB class 11 computer.\nNotes will be updated and added regularly."),
+                        ));
+              },
+            )
           ],
         )
       ]),
@@ -145,6 +168,26 @@ class CustomListTile extends StatelessWidget {
           ),
           trailing: const Icon(Icons.arrow_right),
         ),
+      ),
+    );
+  }
+}
+
+class Button extends StatelessWidget {
+  final IconData icon;
+  var ontap;
+  Button({Key? key, required this.icon, this.ontap})
+      : super(
+          key: key,
+        );
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        onTap: ontap,
+        child: Icon(icon),
       ),
     );
   }
