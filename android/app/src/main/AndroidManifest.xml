@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.techlearnhere.class11computer">
    <application
-        android:label="class11computer"
+        android:label="Class 11 Computer Guide"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

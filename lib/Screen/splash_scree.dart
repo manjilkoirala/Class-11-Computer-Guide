@@ -46,7 +46,7 @@ class _SplashState extends State<Splash> {
               height: 10,
             ),
             const Text(
-              "Class 11 Computer Guid",
+              "Class 11 Computer Guide",
               style: TextStyle(fontSize: 16),
             ),
           ],

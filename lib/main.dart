@@ -1,14 +1,8 @@
 import 'package:class11computer/Screen/splash_scree.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:upgrader/upgrader.dart';
-
-import 'Screen/homepage.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  await Upgrader.clearSavedSettings();
   runApp(const MyApp());
 }
 
