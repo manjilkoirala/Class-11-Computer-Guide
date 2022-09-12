@@ -1,8 +1,11 @@
 // ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:upgrader/upgrader.dart';
 
 import '../model/notesmodel.dart';
+import '../widgets/adhelper.dart';
 import '../widgets/appbar.dart';
 
 class NotePage extends StatelessWidget {
@@ -36,6 +39,13 @@ class NotePage extends StatelessWidget {
       appBar: MyAppBar(
         title: custometitle,
         space: 0.0,
+      ),
+      bottomNavigationBar: SizedBox(
+        height: getbannerAd().size.height.toDouble(),
+        width: getbannerAd().size.width.toDouble(),
+        child: AdWidget(
+          ad: getbannerAd(),
+        ),
       ),
       body: ListView.builder(
         itemCount: func.length,

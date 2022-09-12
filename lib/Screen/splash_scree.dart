@@ -1,4 +1,5 @@
 import 'package:class11computer/Screen/homepage.dart';
+import 'package:class11computer/Screen/question_answer.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {

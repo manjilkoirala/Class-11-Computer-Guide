@@ -3,8 +3,12 @@
 import 'package:class11computer/Screen/question_answer.dart';
 import 'package:class11computer/widgets/appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:share/share.dart';
 import 'package:store_redirect/store_redirect.dart';
+import 'package:upgrader/upgrader.dart';
+
+import '../widgets/adhelper.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -51,97 +55,110 @@ class HomePage extends StatelessWidget {
         )
       ]),
       backgroundColor: Theme.of(context).backgroundColor,
-      body: ListView(
-        children: [
-          CustomListTile(
-            title: '1. Computer system',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Computer System',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '2. Number system and conversion Boolean Logic',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Number System',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '3. Computer software and operating system.	',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Computer Software',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '4. Application Package (Word, Excel, Powerpoint)',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Application Package',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '5. Programming concepts and logics (C-language)',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Programming Concepts',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '6. Web Technology-I (HTML + CSS)',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Web Technology',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '7. Multimedia',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Multimedia',
-                          )));
-            },
-          ),
-          CustomListTile(
-            title: '8. Information security and cyber law',
-            follow: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NotePage(
-                            custometitle: 'Information Security',
-                          )));
-            },
-          ),
-        ],
+      bottomNavigationBar: SizedBox(
+        height: getbannerAd().size.height.toDouble(),
+        width: getbannerAd().size.width.toDouble(),
+        child: AdWidget(
+          ad: getbannerAd(),
+        ),
+      ),
+      body: UpgradeAlert(
+        upgrader: Upgrader(
+            showIgnore: false,
+            shouldPopScope: () => true,
+            durationUntilAlertAgain: const Duration(minutes: 10)),
+        child: ListView(
+          children: [
+            CustomListTile(
+              title: '1. Computer system',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Computer System',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '2. Number system and conversion Boolean Logic',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Number System',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '3. Computer software and operating system.	',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Computer Software',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '4. Application Package (Word, Excel, Powerpoint)',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Application Package',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '5. Programming concepts and logics (C-language)',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Programming Concepts',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '6. Web Technology-I (HTML + CSS)',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Web Technology',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '7. Multimedia',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Multimedia',
+                            )));
+              },
+            ),
+            CustomListTile(
+              title: '8. Information security and cyber law',
+              follow: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotePage(
+                              custometitle: 'Information Security',
+                            )));
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
