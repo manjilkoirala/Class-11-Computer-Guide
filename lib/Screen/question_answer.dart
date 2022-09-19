@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:upgrader/upgrader.dart';
 
 import '../model/notesmodel.dart';
 import '../widgets/adhelper.dart';
@@ -69,7 +68,21 @@ class SubjectList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ExpansionTile(
-        title: Text(item.question),
+        title: Row(
+          children: [
+            CircleAvatar(
+              child: Text(item.num.toString()),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: Text(
+                item.question,
+              ),
+            ),
+          ],
+        ),
         children: [
           if (item.img != null)
             Padding(
