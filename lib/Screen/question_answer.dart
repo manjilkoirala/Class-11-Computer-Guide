@@ -36,8 +36,8 @@ class NotePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: MyAppBar(
-        title: custometitle,
         space: 0.0,
+        title: Hero(tag: 'chname', child: Text(custometitle)),
       ),
       bottomNavigationBar: SizedBox(
         height: getbannerAd().size.height.toDouble(),

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: const Splash(),
         theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
+          primarySwatch: Colors.deepPurple,
           fontFamily: GoogleFonts.poppins().fontFamily,
         ));
   }
